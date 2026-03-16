@@ -8,7 +8,7 @@ Prosjektet omfatter analyse av surveydata og klargjøring av rådata til analyse
 TODO
 
 ## Avhengigheter
-Prosjektet krever Python 3.11 elelr nyere. Installer avhengigheter med:
+Prosjektet krever Python 3.11 eller nyere. Installer avhengigheter med:
 ```
 pip install -r requirements.txt
 ```
@@ -37,6 +37,9 @@ python -m src.tasks.task_2_2.cleaning_pipeline
 ```
 #### Utdata
 Etter kjøring vil følgende filer genereres:
+
+| Fil | Beskrivelse |
+|-----|-------------|
 | cleaned_data.xlsx |Renset datasett klar for analyse |
 | needs_manual_inspection.xlsx | Rader som krever manuell gjennomgang |
 | removed_rows.xlsx | Rader fjernet pga. valideringsfeil |
@@ -44,6 +47,9 @@ Etter kjøring vil følgende filer genereres:
 
 #### Pipeline-trinn
 Pipelinen følger en sekvensiell struktur for å sikre dataintegritet:
+
+| Trinn | Beskrivelse |
+|-------|-------------|
 | 1. Normalisering | Standardiserer datoformater, endrer tekst til små bokstaver, fjerner overfladiske mellomrom |
 | 2. Validering | Sjekk av gyldige verdier; datoer, tekster, tall |
 | 3. Deduplisering | Identifisering og flytting av duplikater for manuell revidering |
