@@ -8,7 +8,7 @@ Coordinates the end-to-end data processing workflow:
 4. Detecting duplicates for manual review
 5. Transforming data structure (merging names, formatting)
 6. Enriching with external data (county numbers, income levels)
-7. Standardizing output schema and saving results
+7. Finalization with standardizing output schema and saving results
 
 The module manages the flow of the data between the stages, accumulates
 inspection records for manual review and handles logging.

@@ -40,13 +40,6 @@ def add_county_number(
   Returns:
     DataFrame with new 'fylkesnummer' column added
     If county_df is None or Missing, the column is not added
-
-  Args:
-    df: The data to enrich
-    county_df: Reference DataFrame with Kommunenr and Fylkesnr columns
-
-  Returns:
-    DataFrame with new Fylkesnr column
   """
   df = df.copy()
 
