@@ -74,7 +74,7 @@ def run_cleaning_pipeline():
 
     # Load reference table for municipality validation (optional)
     try:
-        county_df = pd.read_excel(DATA_PATH / "kommune_fylke_kartverketXXX.xlsx")
+        county_df = pd.read_excel(DATA_PATH / "kommune_fylke_kartverket.xlsx")
         logging.info("County reference table loaded successfully")
     except FileNotFoundError:
         logging.warning("County reference file not found. Skipping municipality validation.")
