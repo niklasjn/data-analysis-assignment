@@ -1,5 +1,5 @@
 """
-Data deduplication module for the cleaning pipeline.
+Data deduplication module for task 2.2: Cleaning pipeline.
 
 Handles identification and isolation of duplicate records:
   - Email-based duplicates (exact matches)

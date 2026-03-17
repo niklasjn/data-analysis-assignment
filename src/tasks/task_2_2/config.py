@@ -1,5 +1,5 @@
 """
-Configuration module for the data cleaning pipeline.
+Configuration module for task 2.2: Data cleaning pipeline.
 
 Defines constants used across the pipeline:
 - Column name mappings (source names)

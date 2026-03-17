@@ -1,5 +1,5 @@
 """
-Data validation module for the cleaning pipeline.
+Data validation module for for task 2.2: Cleaning pipeline.
 
 Handles data quality checks including:
   - Regex pattern matching for names and emails

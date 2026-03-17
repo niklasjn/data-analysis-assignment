@@ -1,5 +1,5 @@
 """
-Data normalization module for the cleaning pipeline.
+Data normalization module for task 2.2: Cleaning pipeline.
 
 Handles normalizaton of data formats including:
   - String normalization (lowercase, whitespace trimming)

@@ -1,5 +1,5 @@
 """
-Data enrichment module for the cleaning pipeline.
+Data enrichment module for task 2.2: Cleaning pipeline.
 
 Handles augmentation of the dataset with external data and derived features:
   - Adding county numbers (Fylkesnr) based on municipality lookup

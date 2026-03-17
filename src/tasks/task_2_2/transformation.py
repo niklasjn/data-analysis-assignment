@@ -1,5 +1,5 @@
 """
-Data transformation module for the cleaning pipeline.
+Data transformation module for for task 2.2: Cleaning pipeline.
 
 Handles structural changes to the DataFrame including:
   - Merging name columns into full names

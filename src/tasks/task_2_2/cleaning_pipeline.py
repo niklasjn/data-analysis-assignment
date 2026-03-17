@@ -1,5 +1,5 @@
 """
-Main orchestration module for the data cleaning pipeline.
+Main orchestration module for the data cleaning pipeline in task 2.2.
 
 Coordinates the end-to-end data processing workflow:
 1. Loading raw data and reference tables
@@ -14,7 +14,7 @@ The module manages the flow of the data between the stages, accumulates
 inspection records for manual review and handles logging.
 
 Usage:
-    python cleaning_pipeline.py
+    python -m src.tasks.task_2_2.cleaning_pipeline
 """
 
 
@@ -56,6 +56,7 @@ def run_cleaning_pipeline():
     # -----------------------------------------------------------------------------
     # 1. Initialize logging and load data
     # -----------------------------------------------------------------------------
+    
     # Configure logging
     logging.basicConfig(
     filename= LOG_PATH / 'processing.log',
@@ -83,12 +84,14 @@ def run_cleaning_pipeline():
     # -----------------------------------------------------------------------------
     # 2. Normalize data
     # -----------------------------------------------------------------------------
+
     logging.info("Normalizing data formats")
     df = normalize_data(df)
 
     # -----------------------------------------------------------------------------
     # 3. Validate data
     # -----------------------------------------------------------------------------
+
     logging.info("Validating data quality")
     valid_mask, invalid_df = apply_validation_rules(df, county_df=county_df)
 
@@ -124,6 +127,7 @@ def run_cleaning_pipeline():
     # -----------------------------------------------------------------------------
     # 4. Deduplicate data
     # -----------------------------------------------------------------------------
+
     logging.info("Checking for duplicates")
     df, email_inspection = handle_duplicate_emails(df)
     df, person_inspection = handle_name_dob_duplicates(df)
@@ -140,12 +144,14 @@ def run_cleaning_pipeline():
     # -----------------------------------------------------------------------------
     # 5. Transform data
     # -----------------------------------------------------------------------------
+
     logging.info("Transforming data structure")
     df = merge_names(df)   
 
     # -----------------------------------------------------------------------------
     # 6. Enrich data
     # -----------------------------------------------------------------------------
+
     logging.info("Enriching data with external information")
     df = add_county_number(df, county_df)
     df = add_income_level(df)
@@ -155,6 +161,7 @@ def run_cleaning_pipeline():
     # -----------------------------------------------------------------------------
     # 7. Finalize/standardize output and save
     # -----------------------------------------------------------------------------
+
     logging.info("Standardizing output schema")
     df = standardize_columns(df)
 
