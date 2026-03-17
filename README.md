@@ -79,6 +79,18 @@ eller tilsvarende for oppgave 2.1.2.
 
 ## Oppgaveløsninger og kjøring av kode
 
+### Plassering av datafiler
+Følgende filer må manuelt legges inn i 
+
+  "data-analysis-assignment/src/data/raw/" 
+
+før kjøring av scripts:
+
+- fiktiv_kontaktinformasjon.xlsx
+- Kodebok_SB2025_portal.xlsx
+- kommune_fylke_kartverket.xlsx
+- programfil_SB2025_portal.xlsx
+
 ### 2.1.1 Studentbarometeret *Eget læringsutbytte*
 
 #### Naviger til riktig task-mappe
